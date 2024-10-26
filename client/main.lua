@@ -54,6 +54,46 @@ local mapText = require 'config.client'.pauseMapText
 if mapText == '' or type(mapText) ~= 'string' then mapText = 'FiveM' end
 AddTextEntry('FE_THDR_GTAO', mapText)
 
+local map_category = require 'config.client'.pausemapCategory
+if map_category == '' or type(map_category) ~= 'string' then map_category = 'Map' end
+AddTextEntry('PM_SCR_MAP', map_category)
+
+local game_category = require 'config.client'.pausegameCategory
+if game_category == '' or type(game_category) ~= 'string' then game_category = 'Take the plane' end
+AddTextEntry('PM_SCR_GAM', game_category)
+
+local disconnect_submenu = require 'config.client'.pauseDisconnect
+if disconnect_submenu == '' or type(disconnect_submenu) ~= 'string' then disconnect_submenu = 'Go back to the list of servers' end
+AddTextEntry('PM_PANE_LEAVE', disconnect_submenu)
+
+local closegame_submenu = require 'config.client'.pauseCloseGame
+if closegame_submenu == '' or type(closegame_submenu) ~= 'string' then closegame_submenu = 'Exit FiveM and return to desktop' end
+AddTextEntry('PM_PANE_QUIT', closegame_submenu)
+
+local info_category = require 'config.client'.pauseInfo
+if info_category == '' or type(info_category) ~= 'string' then info_category = 'Logs' end
+AddTextEntry('PM_SCR_INF', info_category)
+
+local statistics_category = require 'config.client'.pauseStatistics
+if statistics_category == '' or type(statistics_category) ~= 'string' then statistics_category = 'Statistics' end
+AddTextEntry('PM_SCR_STA', statistics_category)
+
+local settings_category = require 'config.client'.pauseSettings
+if settings_category == '' or type(settings_category) ~= 'string' then settings_category = 'Settings' end
+AddTextEntry('PM_SCR_SET', settings_category)
+
+local gallery_category = require 'config.client'.pauseGallery
+if gallery_category == '' or type(gallery_category) ~= 'string' then gallery_category = 'Gallery' end
+AddTextEntry('PM_SCR_GAL', gallery_category)
+
+local rockstar_editor_category = require 'config.client'.pauseRockstarEditor
+if rockstar_editor_category == '' or type(rockstar_editor_category) ~= 'string' then rockstar_editor_category = 'R-Editor' end
+AddTextEntry('PM_SCR_RPL', rockstar_editor_category)
+
+local fivem_key_config_submenu = require 'config.client'.pauseFiveMKeyConfig
+if fivem_key_config_submenu == '' or type(fivem_key_config_submenu) ~= 'string' then fivem_key_config_submenu = 'FiveM' end
+AddTextEntry('PM_PANE_CFX', fivem_key_config_submenu)
+
 CreateThread(function()
     for _, v in pairs(GetVehiclesByName()) do
         if v.model and v.name then

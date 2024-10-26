@@ -4,6 +4,18 @@ return {
 
     pauseMapText = 'Powered by Qbox', -- Text shown above the map when ESC is pressed. If left empty 'FiveM' will appear
 
+    -- Categories for the pause menu
+    pausemapCategory = 'Map',
+    pausegameCategory = 'Game',
+    pauseDisconnect = 'Go back to the list of servers',
+    pauseCloseGame = 'Exit FiveM and return to desktop',
+    pauseInfo = 'Logs',
+    pauseStatistics = 'Statistics',
+    pauseSettings = 'Settings',
+    pauseGallery = 'Gallery',
+    pauseRockstarEditor = 'R-Editor',
+    pauseFiveMKeyConfig = 'FiveM',
+
     characters = {
         useExternalCharacters = false, -- Whether you have an external character management resource. (If true, disables the character management inside the core)
         enableDeleteButton = true, -- Whether players should be able to delete characters themselves.
